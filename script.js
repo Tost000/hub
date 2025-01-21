@@ -12,7 +12,7 @@ buttons.forEach((button) => {
       .then(() => {
         // Изменяем стиль кнопки
         const originalText = this.textContent; // Сохраняем оригинальный текст кнопки
-        this.textContent = "Code copied";
+        this.textContent = "Текст скопирован";
         this.classList.add("copied");
         this.disabled = true;
 
