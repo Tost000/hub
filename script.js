@@ -9,7 +9,20 @@ buttons.forEach((button) => {
     // Копируем текст в буфер обмена
     navigator.clipboard
       .writeText(textToCopy)
-      .then(() => alert(`Скопировано: "${textToCopy}"`))
-      .catch((err) => alert(`Ошибка: ${err}`));
+      .then(() => {
+        // Изменяем стиль кнопки
+        const originalText = this.textContent; // Сохраняем оригинальный текст кнопки
+        this.textContent = "Code copied";
+        this.classList.add("copied");
+        this.disabled = true;
+
+        // Возвращаем кнопку в исходное состояние через 1 секунду
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.classList.remove("copied");
+          this.disabled = false;
+        }, 1000); // 1 секунда
+      })
+      .catch((err) => console.error(`Ошибка: ${err}`));
   });
 });
