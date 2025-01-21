@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Shantell Sans", serif;
   margin: 20px;
 }
 .level-container {
@@ -25,4 +26,19 @@ body {
   background-color: gray;
   color: #ddd;
   cursor: not-allowed;
+}
+.lvl_1 {
+  color: rebeccapurple;
+}
+.lvl_2 {
+  color: blue;
+}
+.lvl_3 {
+  color: green;
+}
+.lvl_4 {
+  color: pink;
+}
+.lvl_5 {
+  color: red;
 }
